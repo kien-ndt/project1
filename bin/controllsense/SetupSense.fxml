@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#activeSizeStackSlider" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllsense.FirstSenseControll">
+   <right>
+      <VBox fx:id="rightPane" prefHeight="470.0" prefWidth="160.0" style="-fx-background-color: E5FE9F;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="manualButton" mnemonicParsing="false" onAction="#manualButtonClick" prefHeight="65.0" prefWidth="156.0" text="Manual">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="autoButton" mnemonicParsing="false" onAction="#autoButton" prefHeight="65.0" prefWidth="156.0" text="Auto" />
+            <Label text="Stack Size">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Slider fx:id="stackSizeSlider" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onDragDetected="#activeSizeStackSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+         </children></VBox>
+   </right>
+   <center>
+      <ScrollPane fx:id="scrollPane" maxHeight="750.0" maxWidth="1150.0" prefHeight="470.0" prefWidth="743.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane fx:id="centerPane" maxHeight="700.0" maxWidth="1100.0" prefHeight="700.0" prefWidth="1100.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafdff" height="258.0" layoutX="15.0" layoutY="419.0" stroke="BLACK" strokeType="INSIDE" width="307.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="10.0" />
+                  <Button fx:id="paneButton" layoutY="2.0" mnemonicParsing="false" onAction="#paneButtonClick" opacity="0.0" prefHeight="700.0" prefWidth="1100.0" text="anchorButton" />
+                  <Button fx:id="stack1Click" layoutX="430.0" layoutY="43.0" mnemonicParsing="false" onAction="#stack1Click" opacity="0.0" prefHeight="77.0" prefWidth="201.0" text="stack1Click" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="43.0" />
+                  <Line fx:id="s1Side1" endX="100.0" layoutX="643.0" layoutY="46.0" startX="-100.0" AnchorPane.rightAnchor="56.5" AnchorPane.topAnchor="45.5" />
+                  <Line fx:id="rootLine1" endY="36.0" layoutX="743.0" layoutY="82.0" startY="-36.0" AnchorPane.rightAnchor="56.5" AnchorPane.topAnchor="45.5" />
+                  <Line fx:id="s1Side2" endX="100.0" layoutX="643.0" layoutY="119.0" startX="-100.0" AnchorPane.rightAnchor="56.5" AnchorPane.topAnchor="117.5" />
+                  <Label fx:id="s1Label" layoutX="550.0" layoutY="119.0" text="Stack1" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="119.0">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="s1LabelButton" layoutX="603.0" layoutY="128.0" mnemonicParsing="false" onAction="#s1LabelButtonClick" opacity="0.0" prefHeight="24.0" prefWidth="80.0" text="s1LabelButton" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="127.0" />
+                  <Line fx:id="s2Side1" endY="100.0" layoutX="329.0" layoutY="339.0" startY="-100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="329.0" />
+                  <Line fx:id="s2Side2" endY="100.0" layoutX="402.0" layoutY="339.0" startY="-100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="402.0" />
+                  <Line fx:id="rootLine2" endX="36.0" layoutX="366.0" layoutY="439.5" startX="-36.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="329.0" />
+                  <Label fx:id="s2Label" layoutX="410.0" layoutY="399.0" text="Stack2" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="410.0">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="startButton" layoutX="14.0" layoutY="472.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="95.0" text="Start" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="14.0" />
+                  <Button fx:id="stack2Click" layoutX="329.0" layoutY="239.0" mnemonicParsing="false" onAction="#stack2Click" opacity="0.0" prefHeight="200.0" prefWidth="74.0" text="stack2Click" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="329.0" />
+                  <Button fx:id="pauseButton" layoutX="119.0" layoutY="473.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="90.0" text="Pause" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="119.0" />
+                  <Button fx:id="backButton" layoutX="217.0" layoutY="473.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="90.0" text="Setting" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="217.0" />
+                  <Button fx:id="s2LabelButton" layoutX="410.0" layoutY="399.0" mnemonicParsing="false" onAction="#s2LabelButtonClick" opacity="0.0" prefHeight="35.0" prefWidth="87.0" text="Button" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="410.0" />
+                  <Button fx:id="elementButton" layoutX="1002.0" layoutY="47.0" mnemonicParsing="false" onAction="#elementButtonClick" prefHeight="69.0" prefWidth="40.0" text=" " AnchorPane.rightAnchor="58.0" />
+                  <Button fx:id="pushButton" layoutX="14.0" layoutY="530.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="96.0" text="Push" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="14.0" />
+                  <Button fx:id="popButton" layoutX="119.0" layoutY="532.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="91.0" text="Pop" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="119.0" />
+                  <Button fx:id="resumeButton" layoutX="217.0" layoutY="529.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="90.0" text="Resume" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="217.0" />
+                  <Label layoutX="120.0" layoutY="442.0" text="Controller" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="120.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Group layoutX="-190.0" layoutY="283.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="14.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <RadioButton fx:id="radioButton3" layoutX="349.0" layoutY="181.0" mnemonicParsing="false" text="x2" />
+                              <RadioButton fx:id="radioButton2" layoutX="307.0" layoutY="181.0" mnemonicParsing="false" text="x1" />
+                              <RadioButton fx:id="radioButton4" layoutX="394.0" layoutY="181.0" mnemonicParsing="false" text="x4" />
+                              <RadioButton fx:id="radioButton1" layoutX="252.0" layoutY="181.0" mnemonicParsing="false" text="x0.5" />
+                           </children>
+                        </Group>
+                        <Label layoutX="204.0" layoutY="180.0" text="Speed:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="40.0">
+                     <children>
+                        <Label layoutX="40.0" layoutY="444.0" text="ID:" AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="40.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idText" layoutX="68.0" layoutY="448.0" AnchorPane.bottomAnchor="229.0" AnchorPane.leftAnchor="68.0" />
+                     </children>
+                  </Group>
+                  <Button fx:id="changeDemo" layoutX="14.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Manual" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="14.0" />
+                  <Button fx:id="changeAuto" layoutX="211.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Auto" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="130.0" />
+                  <Button fx:id="resetButton" layoutX="236.0" layoutY="311.0" mnemonicParsing="false" text="Reset" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="250.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <VBox prefHeight="130.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="botPane" prefHeight="68.0" prefWidth="1100.0" style="-fx-background-color: E5FE9F;" />
+            <HBox fx:id="botPane1" prefHeight="71.0" prefWidth="1100.0" style="-fx-background-color: E5FE9F;" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
